@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* height: 3000px; */
 }
 
 h1, h2, h3, h4, h5, h6, span {
@@ -33,6 +34,11 @@ li {
   flex: 1;
 }
 
+.container {
+  padding: 50px 0;
+  /* background-color: rgb(246, 246, 246); */
+}
+
 .row {
   width: 100%;
   max-width: 800px;
@@ -41,6 +47,14 @@ li {
 
 .text--purple {
   color: #6030b1;
+}
+
+section:nth-child(even)  {
+  background-color: #f8f8f8;
+}
+
+.section_title {
+  margin-bottom: 20px;
 }
 
 /* NAVIGATION BAR */
@@ -143,8 +157,58 @@ nav {
   flex: 1;
   display: flex;
   align-items: center;
+  margin-top: 12px;
 }
 
 .about-me_img {
-  width: 100%;
+  max-width: 100%;
 }
+
+/* TECHNOLOGY-STACK */
+
+.language {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.language_img {
+  width: 100%;
+  max-width: 100px;
+  transition: all 300ms ease;
+}
+
+.language_img:hover {
+  filter:brightness(80%);
+  opacity: 0.86;
+  transform: scale(0.9);
+}
+
+.language_img--wrapper {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 25px;
+}
+
+.language_list {
+  display: flex;  
+  flex-wrap: wrap;
+}
+
+.language_name {  
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 300ms ease;
+  font-size: 20px;
+}
+
+.language:hover .language_name {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
